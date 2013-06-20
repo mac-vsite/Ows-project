@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head><link href="Mat_Mil.css" rel="stylesheet" type="text/css"><title>Novo</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+function theRotator() {
+	$('div.rotator ul li').css({opacity: 0.0});
+	$('div.rotator ul li:first').css({opacity: 1.0});
+	setInterval('rotate()',4000);
+	
+}
+
+function rotate() {	
+	var current = ($('div.rotator ul li.show')?  $('div.rotator ul li.show') : $('div.rotator ul li:first'));
+    if ( current.length == 0 ) current = $('div.rotator ul li:first');
+	var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div.rotator ul li:first') :current.next()) : $('div.rotator ul li:first'));
+	
+	next.css({opacity: 0.0})
+	.addClass('show')
+	.animate({opacity: 1.0}, 1000);
+
+	current.animate({opacity: 0.0}, 1000)
+	.removeClass('show');
+	
+};
+
+
+$(document).ready(function() {		
+	theRotator();
+	$('div.rotator').fadeIn(500);
+    $('div.rotator ul li').fadeIn(1000); // IE
+});
+</script>
+</head>
+<body>
+<div id= "lijevi">
+<img src="pics\logo-mm.png" alt="Graditeljstvo MAT-MIL"></a>
+</div>
+
+<div id="izbornik">
+<ul>
+	<li><a class="changeColor"href="index.html"><span></span><strong>Naslovna</strong></a></li>
+	<li><a class="changeColor" href="O_nama.html"><span></span><strong>O nama</strong></a>    </li>
+	<li><a class="changeColor" href="Kontakt.html"><span></span><strong>Kontakt</strong></a>  </li>
+</ul>
+</div>
+<div id="txt_n">
+<p id="tekst_novo">Uz poslove unutranjih ure&#273;enja-završnih radova, po&#269;eli smo se baviti i restauracijom ošte&#263;enih spomenika kulture.
+Gdje sa svojim stru&#269;nim timom zadovoljavamo složene uvjete restauratorskih zahvata. </p>
+</div>
+
+<div class="rotator">
+  <ul>
+    <li><img src="pics4slide\03062009782.jpg"     width="500" height="313"  alt="pic1"/>
+    <li><img src="pics4slide\03062009798.jpg" width="500" height="313"  alt="pic2" />
+  <li><img src="pics4slide\09062009837.jpg"   width="500" height="313"  alt="pic3" />
+    <li><img src="pics4slide\22092008013.jpg" width="500" height="313"  alt="pic4" />
+    <li><img src="pics4slide\22092008014.jpg" width="500" height="313"  alt="pic4" />
+    <li><img src="pics4slide\IMG_0673.jpg"    width="500" height="313"  alt="pic4" />
+    <li><img src="pics4slide\IMG_0681.jpg"    width="500" height="313"  alt="pic4" />
+    <li><img src="pics4slide\IMG_0684.jpg"    width="500" height="313"  alt="pic4" />
+    <li><img src="pics4slide\IMG_0685.jpg"    width="500" height="313"  alt="pic4" />
+  </ul>
+
+
+</body>
+</html>	

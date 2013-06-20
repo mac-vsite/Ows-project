@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head><link href="Mat_Mil.css" rel="stylesheet" type="text/css"><title>Naslovna</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+function theRotator() {
+	$('div.rotator ul li').css({opacity: 0.0});
+	$('div.rotator ul li:first').css({opacity: 1.0});
+	setInterval('rotate()',4000);
+	
+}
+
+function rotate() {	
+	var current = ($('div.rotator ul li.show')?  $('div.rotator ul li.show') : $('div.rotator ul li:first'));
+    if ( current.length == 0 ) current = $('div.rotator ul li:first');
+	var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div.rotator ul li:first') :current.next()) : $('div.rotator ul li:first'));
+	
+	next.css({opacity: 0.0})
+	.addClass('show')
+	.animate({opacity: 1.0}, 1000);
+
+	current.animate({opacity: 0.0}, 1000)
+	.removeClass('show');
+	
+};
+
+
+$(document).ready(function() {		
+	theRotator();
+	$('div.rotator').fadeIn(500);
+    $('div.rotator ul li').fadeIn(1000); // IE
+});
+</script>
+</head>
+
+<body>
+<div id= "lijevi">
+<img src="pics\logo-mm.png" alt="Graditeljstvo MAT-MIL"></a>
+</div>
+
+<div id = "desni">
+<a href="http://www.samoborka.hr/fugirajte-sa-samoborkom"><img src="pics\terafil-fleks-5-kg_95346.png" alt="terafil-fleks" height="500" width="400"></a>
+</div>
+<div id="izbornik">
+<ul>
+	
+	<li><a class="changeColor"  href="O_nama.html"><span></span><strong>O nama</strong></a>    </li>
+	<li><a class="changeColor"  href="Kontakt.html"><span></span><strong>Kontakt</strong></a>  </li>
+	<li><a class="changeColor"  href="Novo.html"><span></span><strong>Novo</strong></a>	      </li>
+	
+</ul>
+</div>
+
+<div class="rotator">
+  <ul>
+     <li class="show"><img src="pics4slide\construction1.gif"     width="500" height="313"  alt="pic1"/></a></li>
+     <li class="show"><img src="pics4slide\13594766413d.jpg "     width="500" height="313"  alt="pic1"/></a></li>
+     <li class="show"><img src="pics4slide\ecofilm_warm_floorconst.png "     width="500" height="313"  alt="pic1"/></a></li>
+</ul>
+</div>
+		
+</body>
+</html>		

@@ -1,0 +1,149 @@
+ul{
+list-style-type:none;
+display:inline;
+margin:0px;
+padding:0px;}
+
+#lijevi{
+background-color:rgba(255,0,0,0);
+float:left;}
+
+#desni{
+float:right;
+}
+#desni img{
+opacity:0.6;}
+
+body{
+background-color:#7F7F7F;
+height:auto;
+width:auto;
+background-size:100%;
+background-image:url('pics/bk-pic2.png');
+background-attachment:fixed;
+background-repeat:no-repeat;
+}
+
+
+#izbornik{
+
+margin: auto;
+padding-left:200px;
+padding-top:5%;
+width :800px;
+
+}
+
+#izbornik li {
+	margin: 0 20px;
+	float: left;
+	position: relative;
+	list-style: none;
+	font-size: 30px;
+	border:2px solid #999;
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+}
+
+#animacija img{
+position:relative;
+background-color:white;
+width:480px;
+height:280px;
+left:250px;
+top:50px;
+box-shadow: 10px 10px 5px #FFFFFF;
+
+}
+
+#izbornik li a{
+text-decoration:none;
+
+}
+a.changeColor {color:#000000;}
+a.changeColor:hover {color: #FFFFFF;}
+
+#izbornik li:hover{background-color:black;}
+#Onama{
+position:absolute;
+width:560px;
+left:29%;
+top:16%;
+}
+#Onama p{color:white;}
+p{font-size:20px;}
+
+p#potpis,#direktor{text-align:right;}
+p#popis_onama{text-align:center;}
+p#naslov_onama{text-align:center;font-size:24px;text-decoration:underline;}
+
+#poz1 img{position:absolute;
+height:700px;
+left:27%;
+top:17%;
+width:610px;}
+
+#kontakt_proz{position:absolute;
+
+top:20%;
+left:3%;}
+
+#kontakt_proz img{
+height:160px;
+width:350px;
+opacity:0.7;
+
+}
+
+#kontakt_proz p{position:absolute;
+top:15px;
+left:10px;
+font-weight:bold;
+font-size:24px;
+}
+
+#pozicija iframe{
+position:absolute;
+right:330px;
+top:180px;
+border:2px solid black;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;}	
+
+/* rotator in-page placement */
+    div.rotator {
+	position:absolute;
+	height:345px;
+        top:200px;
+         left:470px;
+	margin-left: 15px;
+	display: none;
+}
+/* rotator css */
+	div.rotator ul li {
+	float:left;
+	position:absolute;
+	list-style: none;
+}
+/* rotator image style */	
+	div.rotator ul li img {
+	border:1px solid black;/*vanjski rub*/
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-top-left-radius: 25px;
+	padding: 10px;/*debljina pozadine*/
+	background: #FFF;/*bijela pozadina*/
+}
+    div.rotator ul li.show {
+	z-index:500
+}
+#txt_n{
+position:relative;
+width:250px;
+left:120px;
+top:100px;}
+#txt_n p{text-align:left;
+font-weight:bold;}
